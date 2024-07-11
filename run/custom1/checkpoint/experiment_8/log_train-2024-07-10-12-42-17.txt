@@ -1,0 +1,834 @@
+fusion_type is attention_fusion
+Initializing loss: pairwise_loss
+base_loss is: binary_dice
+fusion_loss is: multi_class_dice
+pairwise loss weights:  [1.0, 1.0]
+Using poly LR Scheduler!
+Starting Epoch: 0
+Total Epoches: 75
+
+=>Epoches 0, learning rate = 0.0025,                 previous best = 0.0000
+[Epoch: 0, numImages:  1347]
+Loss: -157.718
+Val time: 0.11936378479003906
+Total paramerters: 6580326
+Validation:
+[Epoch: 0, numImages:   323]
+Acc:1.2448313858205642e-05, Acc_class:0.5, mIoU:6.224156929102821e-06, fwIoU: 1.5496051791239462e-10
+Loss: -39.742
+Dice:[0.00000000e+00 2.48963178e-05]
+
+=>Epoches 1, learning rate = 0.0025,                 previous best = 0.0000
+[Epoch: 1, numImages:  1347]
+Loss: -161.362
+Val time: 0.11752891540527344
+Total paramerters: 6580326
+Validation:
+[Epoch: 1, numImages:   323]
+Acc:1.2448313858205642e-05, Acc_class:0.5, mIoU:6.224156929102821e-06, fwIoU: 1.5496051791239462e-10
+Loss: -39.742
+Dice:[0.00000000e+00 2.48963178e-05]
+
+=>Epoches 2, learning rate = 0.0024,                 previous best = 0.0000
+[Epoch: 2, numImages:  1347]
+Loss: -161.441
+Val time: 0.11732625961303711
+Total paramerters: 6580326
+Validation:
+[Epoch: 2, numImages:   323]
+Acc:1.2448313858205642e-05, Acc_class:0.5, mIoU:6.224156929102821e-06, fwIoU: 1.5496051791239462e-10
+Loss: -39.743
+Dice:[0.00000000e+00 2.48963178e-05]
+
+=>Epoches 3, learning rate = 0.0024,                 previous best = 0.0000
+[Epoch: 3, numImages:  1347]
+Loss: -161.252
+Val time: 0.11795973777770996
+Total paramerters: 6580326
+Validation:
+[Epoch: 3, numImages:   323]
+Acc:1.2448313858205642e-05, Acc_class:0.5, mIoU:6.224156929102821e-06, fwIoU: 1.5496051791239462e-10
+Loss: -39.743
+Dice:[0.00000000e+00 2.48963178e-05]
+
+=>Epoches 4, learning rate = 0.0024,                 previous best = 0.0000
+[Epoch: 4, numImages:  1347]
+Loss: -161.427
+Val time: 0.11923718452453613
+Total paramerters: 6580326
+Validation:
+[Epoch: 4, numImages:   323]
+Acc:1.2448313858205642e-05, Acc_class:0.5, mIoU:6.224156929102821e-06, fwIoU: 1.5496051791239462e-10
+Loss: -39.787
+Dice:[0.00000000e+00 2.48963178e-05]
+
+=>Epoches 5, learning rate = 0.0023,                 previous best = 0.0000
+[Epoch: 5, numImages:  1347]
+Loss: -162.587
+Val time: 0.1176447868347168
+Total paramerters: 6580326
+Validation:
+[Epoch: 5, numImages:   323]
+Acc:0.5109641707113667, Acc_class:0.7554790414820468, mIoU:0.255491768562816, fwIoU: 0.51095172271437
+Loss: -39.795
+Dice:[6.76336543e-01 5.09070273e-05]
+
+=>Epoches 6, learning rate = 0.0023,                 previous best = 0.2555
+[Epoch: 6, numImages:  1347]
+Loss: -165.417
+Val time: 0.11760544776916504
+Total paramerters: 6580326
+Validation:
+[Epoch: 6, numImages:   323]
+Acc:0.4415868884173461, Acc_class:0.7207899685145688, mIoU:0.22080111441722097, fwIoU: 0.44157444038098337
+Loss: -40.572
+Dice:[6.12633300e-01 4.45826168e-05]
+
+=>Epoches 7, learning rate = 0.0023,                 previous best = 0.2555
+[Epoch: 7, numImages:  1347]
+Loss: -165.395
+Val time: 0.12387919425964355
+Total paramerters: 6580326
+Validation:
+[Epoch: 7, numImages:   323]
+Acc:0.6836635189643342, Acc_class:0.8418297905297566, mIoU:0.3418494655036593, fwIoU: 0.6836510711403165
+Loss: -40.971
+Dice:[8.12111413e-01 7.86967989e-05]
+
+=>Epoches 8, learning rate = 0.0023,                 previous best = 0.3418
+[Epoch: 8, numImages:  1347]
+Loss: -166.463
+Val time: 0.1164543628692627
+Total paramerters: 6580326
+Validation:
+[Epoch: 8, numImages:   323]
+Acc:0.7818926685160429, Acc_class:0.8909449767068637, mIoU:0.3909735122066467, fwIoU: 0.7818802209126224
+Loss: -41.083
+Dice:[8.77596231e-01 1.14135485e-04]
+
+=>Epoches 9, learning rate = 0.0022,                 previous best = 0.3910
+[Epoch: 9, numImages:  1347]
+Loss: -166.817
+Val time: 0.11805558204650879
+Total paramerters: 6580326
+Validation:
+[Epoch: 9, numImages:   323]
+Acc:0.8108017555800451, Acc_class:0.9053997001757992, mIoU:0.4054325955520551, fwIoU: 0.8107893080851709
+Loss: -40.942
+Dice:[8.95515428e-01 1.31572849e-04]
+
+=>Epoches 10, learning rate = 0.0022,                 previous best = 0.4054
+[Epoch: 10, numImages:  1347]
+Loss: -167.110
+Val time: 0.1173393726348877
+Total paramerters: 6580326
+Validation:
+[Epoch: 10, numImages:   323]
+Acc:0.8371232201298289, Acc_class:0.9185605962816565, mIoU:0.4185988072609735, fwIoU: 0.8371107727672952
+Loss: -41.012
+Dice:[9.11340195e-01 1.52832238e-04]
+
+=>Epoches 11, learning rate = 0.0022,                 previous best = 0.4186
+[Epoch: 11, numImages:  1347]
+Loss: -167.322
+Val time: 0.12571001052856445
+Total paramerters: 6580326
+Validation:
+[Epoch: 11, numImages:   323]
+Acc:0.8201918157853249, Acc_class:0.910094788724375, mIoU:0.41012940186549, fwIoU: 0.8201793683332171
+Loss: -41.230
+Dice:[9.01213354e-01 1.38442981e-04]
+
+=>Epoches 12, learning rate = 0.0021,                 previous best = 0.4186
+[Epoch: 12, numImages:  1347]
+Loss: -167.282
+Val time: 0.12716126441955566
+Total paramerters: 6580326
+Validation:
+[Epoch: 12, numImages:   323]
+Acc:0.8531926494687081, Acc_class:0.9265954109709912, mIoU:0.42663780414260744, fwIoU: 0.853180202210297
+Loss: -41.373
+Dice:[9.20780323e-01 1.69558310e-04]
+
+=>Epoches 13, learning rate = 0.0021,                 previous best = 0.4266
+[Epoch: 13, numImages:  1347]
+Loss: -167.386
+Val time: 0.12155961990356445
+Total paramerters: 6580326
+Validation:
+[Epoch: 13, numImages:   323]
+Acc:0.8672163823205369, Acc_class:0.9336073646839061, mIoU:0.43365423472393744, fwIoU: 0.8672039351735846
+Loss: -41.355
+Dice:[9.28885913e-01 1.87462587e-04]
+
+=>Epoches 14, learning rate = 0.0021,                 previous best = 0.4337
+[Epoch: 14, numImages:  1347]
+Loss: -167.340
+Val time: 0.11725878715515137
+Total paramerters: 6580326
+Validation:
+[Epoch: 14, numImages:   323]
+Acc:0.8557960445624173, Acc_class:0.9278971247219872, mIoU:0.4279402831753059, fwIoU: 0.8557835973230592
+Loss: -41.339
+Dice:[9.22294322e-01 1.72618913e-04]
+
+=>Epoches 15, learning rate = 0.0020,                 previous best = 0.4337
+[Epoch: 15, numImages:  1347]
+Loss: -167.577
+Val time: 0.11912202835083008
+Total paramerters: 6580326
+Validation:
+[Epoch: 15, numImages:   323]
+Acc:0.8797217745269447, Acc_class:0.9398601386236025, mIoU:0.4399118812627711, fwIoU: 0.8797093275013037
+Loss: -41.397
+Dice:[9.36011903e-01 2.06949140e-04]
+
+=>Epoches 16, learning rate = 0.0020,                 previous best = 0.4399
+[Epoch: 16, numImages:  1347]
+Loss: -167.138
+Val time: 0.11796903610229492
+Total paramerters: 6580326
+Validation:
+[Epoch: 16, numImages:   323]
+Acc:0.8485504186063816, Acc_class:0.9242742666454948, mIoU:0.42431536048888996, fwIoU: 0.8485379713156216
+Loss: -41.322
+Dice:[9.18070062e-01 1.64361865e-04]
+
+=>Epoches 17, learning rate = 0.0020,                 previous best = 0.4399
+[Epoch: 17, numImages:  1347]
+Loss: -167.441
+Val time: 0.11938118934631348
+Total paramerters: 6580326
+Validation:
+[Epoch: 17, numImages:   323]
+Acc:0.8830715733487542, Acc_class:0.9415350588844404, mIoU:0.44158828370365744, fwIoU: 0.8830591263600145
+Loss: -41.394
+Dice:[9.37904658e-01 2.12876616e-04]
+
+=>Epoches 18, learning rate = 0.0020,                 previous best = 0.4416
+[Epoch: 18, numImages:  1347]
+Loss: -167.611
+Val time: 0.12771320343017578
+Total paramerters: 6580326
+Validation:
+[Epoch: 18, numImages:   323]
+Acc:0.8704378079056837, Acc_class:0.9352180975273875, mIoU:0.4352661328289673, fwIoU: 0.8704253607877425
+Loss: -41.362
+Dice:[9.30730701e-01 1.92122749e-04]
+
+=>Epoches 19, learning rate = 0.0019,                 previous best = 0.4416
+[Epoch: 19, numImages:  1347]
+Loss: -167.666
+Val time: 0.11864686012268066
+Total paramerters: 6580326
+Validation:
+[Epoch: 19, numImages:   323]
+Acc:0.8832034830382175, Acc_class:0.941601014550209, mIoU:0.4416542994749954, fwIoU: 0.8831910360509743
+Loss: -41.345
+Dice:[9.37979054e-01 2.13116987e-04]
+
+=>Epoches 20, learning rate = 0.0019,                 previous best = 0.4417
+[Epoch: 20, numImages:  1347]
+Loss: -167.672
+Val time: 0.1279284954071045
+Total paramerters: 6580326
+Validation:
+[Epoch: 20, numImages:   323]
+Acc:0.8899085975482056, Acc_class:0.9449536135394074, mIoU:0.44501014341448275, fwIoU: 0.8898961506417508
+Loss: -41.433
+Dice:[9.41746996e-01 2.26093938e-04]
+
+=>Epoches 21, learning rate = 0.0019,                 previous best = 0.4450
+[Epoch: 21, numImages:  1347]
+Loss: -167.679
+Val time: 0.11756086349487305
+Total paramerters: 6580326
+Validation:
+[Epoch: 21, numImages:   323]
+Acc:0.9111075102162817, Acc_class:0.9555532018204471, mIoU:0.4556232109455001, fwIoU: 0.9110950636454146
+Loss: -41.435
+Dice:[9.53485794e-01 2.79997295e-04]
+
+=>Epoches 22, learning rate = 0.0018,                 previous best = 0.4556
+[Epoch: 22, numImages:  1347]
+Loss: -167.705
+Val time: 0.12134218215942383
+Total paramerters: 6580326
+Validation:
+[Epoch: 22, numImages:   323]
+Acc:0.8981332550975668, Acc_class:0.9490659935062845, mIoU:0.44912708701058707, fwIoU: 0.8981208083047308
+Loss: -41.396
+Dice:[9.46332492e-01 2.44344162e-04]
+
+=>Epoches 23, learning rate = 0.0018,                 previous best = 0.4556
+[Epoch: 23, numImages:  1347]
+Loss: -167.475
+Val time: 0.12191033363342285
+Total paramerters: 6580326
+Validation:
+[Epoch: 23, numImages:   323]
+Acc:0.8498954730645719, Acc_class:0.9249468022465243, mIoU:0.4249882642924972, fwIoU: 0.8498830257829789
+Loss: -41.374
+Dice:[9.18856741e-01 1.65834432e-04]
+
+=>Epoches 24, learning rate = 0.0018,                 previous best = 0.4556
+[Epoch: 24, numImages:  1347]
+Loss: -167.645
+Val time: 0.11781120300292969
+Total paramerters: 6580326
+Validation:
+[Epoch: 24, numImages:   323]
+Acc:0.8863882002432938, Acc_class:0.9346707717973508, mIoU:0.44324724982770203, fwIoU: 0.8863757773772505
+Loss: -41.375
+Dice:[9.39772061e-01 2.15356003e-04]
+
+=>Epoches 25, learning rate = 0.0017,                 previous best = 0.4556
+[Epoch: 25, numImages:  1347]
+Loss: -167.656
+Val time: 0.11657524108886719
+Total paramerters: 6580326
+Validation:
+[Epoch: 25, numImages:   323]
+Acc:0.8853632654926162, Acc_class:0.9426809192204004, mIoU:0.4427352079364292, fwIoU: 0.8853508185303639
+Loss: -41.408
+Dice:[9.39195671e-01 2.17131289e-04]
+
+=>Epoches 26, learning rate = 0.0017,                 previous best = 0.4556
+[Epoch: 26, numImages:  1347]
+Loss: -167.827
+Val time: 0.11825919151306152
+Total paramerters: 6580326
+Validation:
+[Epoch: 26, numImages:   323]
+Acc:0.9066916123331953, Acc_class:0.941981730489557, mIoU:0.4534104192912014, fwIoU: 0.9066791920408945
+Loss: -41.428
+Dice:[9.5106205e-01 2.6068881e-04]
+
+=>Epoches 27, learning rate = 0.0017,                 previous best = 0.4556
+[Epoch: 27, numImages:  1347]
+Loss: -167.760
+Val time: 0.11757516860961914
+Total paramerters: 6580326
+Validation:
+[Epoch: 27, numImages:   323]
+Acc:0.8957023681714721, Acc_class:0.9166009239274777, mIoU:0.44790651629919354, fwIoU: 0.8956900023969021
+Loss: -41.427
+Dice:[9.44981386e-01 2.23738218e-04]
+
+=>Epoches 28, learning rate = 0.0016,                 previous best = 0.4556
+[Epoch: 28, numImages:  1347]
+Loss: -167.554
+Val time: 0.11934614181518555
+Total paramerters: 6580326
+Validation:
+[Epoch: 28, numImages:   323]
+Acc:0.8887820251440379, Acc_class:0.9245042042436868, mIoU:0.44444407984679885, fwIoU: 0.88876963323298
+Loss: -41.424
+Dice:[9.41115819e-01 2.14904860e-04]
+
+=>Epoches 29, learning rate = 0.0016,                 previous best = 0.4556
+[Epoch: 29, numImages:  1347]
+Loss: -167.661
+Val time: 0.11707949638366699
+Total paramerters: 6580326
+Validation:
+[Epoch: 29, numImages:   323]
+Acc:0.9003163074113937, Acc_class:0.935953164621323, mIoU:0.45021820874966, fwIoU: 0.9003038958608057
+Loss: -41.421
+Dice:[9.47542964e-01 2.42602056e-04]
+
+=>Epoches 30, learning rate = 0.0016,                 previous best = 0.4556
+[Epoch: 30, numImages:  1347]
+Loss: -167.728
+Val time: 0.12291073799133301
+Total paramerters: 6580326
+Validation:
+[Epoch: 30, numImages:   323]
+Acc:0.9020050343527488, Acc_class:0.9510019072327371, mIoU:0.45106541423366237, fwIoU: 0.9019925876200008
+Loss: -41.434
+Dice:[9.48477398e-01 2.53995743e-04]
+
+=>Epoches 31, learning rate = 0.0015,                 previous best = 0.4556
+[Epoch: 31, numImages:  1347]
+Loss: -167.874
+Val time: 0.11764240264892578
+Total paramerters: 6580326
+Validation:
+[Epoch: 31, numImages:   323]
+Acc:0.8917639621455263, Acc_class:0.945881307386292, mIoU:0.44593880617587706, fwIoU: 0.8917515152631942
+Loss: -41.447
+Dice:[9.42784901e-01 2.29968712e-04]
+
+=>Epoches 32, learning rate = 0.0015,                 previous best = 0.4556
+[Epoch: 32, numImages:  1347]
+Loss: -167.876
+Val time: 0.11740326881408691
+Total paramerters: 6580326
+Validation:
+[Epoch: 32, numImages:   323]
+Acc:0.9295852639123876, Acc_class:0.9505878250486661, mIoU:0.46487807303889905, fwIoU: 0.9295728426384663
+Loss: -41.444
+Dice:[9.63507382e-01 3.43408662e-04]
+
+=>Epoches 33, learning rate = 0.0015,                 previous best = 0.4649
+[Epoch: 33, numImages:  1347]
+Loss: -167.391
+Val time: 0.11748552322387695
+Total paramerters: 6580326
+Validation:
+[Epoch: 33, numImages:   323]
+Acc:0.8607010338678305, Acc_class:0.930349649904497, mIoU:0.43039432791565524, fwIoU: 0.8606885866663041
+Loss: -41.387
+Dice:[9.25135297e-01 1.78696077e-04]
+
+=>Epoches 34, learning rate = 0.0015,                 previous best = 0.4649
+[Epoch: 34, numImages:  1347]
+Loss: -167.705
+Val time: 0.12295174598693848
+Total paramerters: 6580326
+Validation:
+[Epoch: 34, numImages:   323]
+Acc:0.8852027105354677, Acc_class:0.9426006407424945, mIoU:0.44265485353880907, fwIoU: 0.8851902635713254
+Loss: -41.434
+Dice:[9.39105325e-01 2.16827676e-04]
+
+=>Epoches 35, learning rate = 0.0014,                 previous best = 0.4649
+[Epoch: 35, numImages:  1347]
+Loss: -167.689
+Val time: 0.12225198745727539
+Total paramerters: 6580326
+Validation:
+[Epoch: 35, numImages:   323]
+Acc:0.9073194034343625, Acc_class:0.9252503875920144, mIoU:0.45372249092853906, fwIoU: 0.9073070222501707
+Loss: -41.456
+Dice:[9.51407332e-01 2.53301116e-04]
+
+=>Epoches 36, learning rate = 0.0014,                 previous best = 0.4649
+[Epoch: 36, numImages:  1347]
+Loss: -167.836
+Val time: 0.11985230445861816
+Total paramerters: 6580326
+Validation:
+[Epoch: 36, numImages:   323]
+Acc:0.8931471395649074, Acc_class:0.9465729047052029, mIoU:0.44663114771223644, fwIoU: 0.8931346927011037
+Loss: -41.434
+Dice:[9.43557337e-01 2.32944893e-04]
+
+=>Epoches 37, learning rate = 0.0014,                 previous best = 0.4649
+[Epoch: 37, numImages:  1347]
+Loss: -167.630
+Val time: 0.11818814277648926
+Total paramerters: 6580326
+Validation:
+[Epoch: 37, numImages:   323]
+Acc:0.9038621671764699, Acc_class:0.9377261165741235, mIoU:0.4519933970434182, fwIoU: 0.9038497544275832
+Loss: -41.417
+Dice:[9.49503144e-01 2.51547717e-04]
+
+=>Epoches 38, learning rate = 0.0013,                 previous best = 0.4649
+[Epoch: 38, numImages:  1347]
+Loss: -167.702
+Val time: 0.12129902839660645
+Total paramerters: 6580326
+Validation:
+[Epoch: 38, numImages:   323]
+Acc:0.9035981356103752, Acc_class:0.9517984677773861, mIoU:0.4518630241358205, fwIoU: 0.9035856889037527
+Loss: -41.437
+Dice:[9.49357418e-01 2.58192098e-04]
+
+=>Epoches 39, learning rate = 0.0013,                 previous best = 0.4649
+[Epoch: 39, numImages:  1347]
+Loss: -167.851
+Val time: 0.11867880821228027
+Total paramerters: 6580326
+Validation:
+[Epoch: 39, numImages:   323]
+Acc:0.9205302472454392, Acc_class:0.8892427858358287, mIoU:0.4603318861441644, fwIoU: 0.9205179411263239
+Loss: -41.402
+Dice:[9.58620471e-01 2.68711484e-04]
+
+=>Epoches 40, learning rate = 0.0013,                 previous best = 0.4649
+[Epoch: 40, numImages:  1347]
+Loss: -167.940
+Val time: 0.12348270416259766
+Total paramerters: 6580326
+Validation:
+[Epoch: 40, numImages:   323]
+Acc:0.9202604866258074, Acc_class:0.9601297469954807, mIoU:0.46020779093066877, fwIoU: 0.9202480402549801
+Loss: -41.491
+Dice:[9.58474099e-01 3.12127022e-04]
+
+=>Epoches 41, learning rate = 0.0012,                 previous best = 0.4649
+[Epoch: 41, numImages:  1347]
+Loss: -167.948
+Val time: 0.11572885513305664
+Total paramerters: 6580326
+Validation:
+[Epoch: 41, numImages:   323]
+Acc:0.9136606169511661, Acc_class:0.9568297710790241, mIoU:0.4569018501169655, fwIoU: 0.9136481704318328
+Loss: -41.465
+Dice:[9.54882017e-01 2.88274595e-04]
+
+=>Epoches 42, learning rate = 0.0012,                 previous best = 0.4649
+[Epoch: 42, numImages:  1347]
+Loss: -167.892
+Val time: 0.1195073127746582
+Total paramerters: 6580326
+Validation:
+[Epoch: 42, numImages:   323]
+Acc:0.9219243169394462, Acc_class:0.9382346827008432, mIoU:0.4610377789354617, fwIoU: 0.9219119146981114
+Loss: -41.445
+Dice:[9.59375794e-01 3.04291047e-04]
+
+=>Epoches 43, learning rate = 0.0012,                 previous best = 0.4649
+[Epoch: 43, numImages:  1347]
+Loss: -167.994
+Val time: 0.12077164649963379
+Total paramerters: 6580326
+Validation:
+[Epoch: 43, numImages:   323]
+Acc:0.9206058566063167, Acc_class:0.960302434135399, mIoU:0.4603808175138473, fwIoU: 0.9205934102439401
+Loss: -41.476
+Dice:[9.58661392e-01 3.13484370e-04]
+
+=>Epoches 44, learning rate = 0.0011,                 previous best = 0.4649
+[Epoch: 44, numImages:  1347]
+Loss: -167.928
+Val time: 0.12088203430175781
+Total paramerters: 6580326
+Validation:
+[Epoch: 44, numImages:   323]
+Acc:0.9139290337187336, Acc_class:0.9569639811334967, mIoU:0.45703628492114706, fwIoU: 0.9139165872049959
+Loss: -41.458
+Dice:[9.55028591e-01 2.89173334e-04]
+
+=>Epoches 45, learning rate = 0.0011,                 previous best = 0.4649
+[Epoch: 45, numImages:  1347]
+Loss: -167.956
+Val time: 0.1209559440612793
+Total paramerters: 6580326
+Validation:
+[Epoch: 45, numImages:   323]
+Acc:0.9167170316486356, Acc_class:0.9583579974516003, mIoU:0.45843272133411744, fwIoU: 0.9167045851951501
+Loss: -41.479
+Dice:[9.56548594e-01 2.98850867e-04]
+
+=>Epoches 46, learning rate = 0.0011,                 previous best = 0.4649
+[Epoch: 46, numImages:  1347]
+Loss: -168.033
+Val time: 0.11970782279968262
+Total paramerters: 6580326
+Validation:
+[Epoch: 46, numImages:   323]
+Acc:0.9270529515199709, Acc_class:0.9635260217204562, mIoU:0.4636113314772749, fwIoU: 0.927040505330038
+Loss: -41.473
+Dice:[9.62145311e-01 3.41180815e-04]
+
+=>Epoches 47, learning rate = 0.0010,                 previous best = 0.4649
+[Epoch: 47, numImages:  1347]
+Loss: -167.973
+Val time: 0.12169575691223145
+Total paramerters: 6580326
+Validation:
+[Epoch: 47, numImages:   323]
+Acc:0.8973256707360158, Acc_class:0.9486621962989146, mIoU:0.44872280933085423, fwIoU: 0.8973132239312177
+Loss: -41.451
+Dice:[9.4588400e-01 2.4242274e-04]
+
+=>Epoches 48, learning rate = 0.0010,                 previous best = 0.4649
+[Epoch: 48, numImages:  1347]
+Loss: -167.983
+Val time: 0.1202843189239502
+Total paramerters: 6580326
+Validation:
+[Epoch: 48, numImages:   323]
+Acc:0.9285594804130379, Acc_class:0.9642792955439786, mIoU:0.4643664039890434, fwIoU: 0.9285470342678862
+Loss: -41.490
+Dice:[9.62956060e-01 3.48373088e-04]
+
+=>Epoches 49, learning rate = 0.0010,                 previous best = 0.4649
+[Epoch: 49, numImages:  1347]
+Loss: -168.005
+Val time: 0.12315750122070312
+Total paramerters: 6580326
+Validation:
+[Epoch: 49, numImages:   323]
+Acc:0.9199939088136962, Acc_class:0.9599964564301823, mIoU:0.460074240365855, fwIoU: 0.9199814624363957
+Loss: -41.486
+Dice:[9.58329488e-01 3.11087347e-04]
+
+=>Epoches 50, learning rate = 0.0009,                 previous best = 0.4649
+[Epoch: 50, numImages:  1347]
+Loss: -168.026
+Val time: 0.1221160888671875
+Total paramerters: 6580326
+Validation:
+[Epoch: 50, numImages:   323]
+Acc:0.9291388928398926, Acc_class:0.9645690053638047, mIoU:0.4646568259463546, fwIoU: 0.9291264467124708
+Loss: -41.473
+Dice:[9.63267538e-01 3.51220641e-04]
+
+=>Epoches 51, learning rate = 0.0009,                 previous best = 0.4649
+[Epoch: 51, numImages:  1347]
+Loss: -168.026
+Val time: 0.1197357177734375
+Total paramerters: 6580326
+Validation:
+[Epoch: 51, numImages:   323]
+Acc:0.898636563060152, Acc_class:0.9493176506202838, mIoU:0.44937904743978907, fwIoU: 0.8986241162748675
+Loss: -41.453
+Dice:[9.46611812e-01 2.45557125e-04]
+
+=>Epoches 52, learning rate = 0.0009,                 previous best = 0.4649
+[Epoch: 52, numImages:  1347]
+Loss: -167.964
+Val time: 0.12491798400878906
+Total paramerters: 6580326
+Validation:
+[Epoch: 52, numImages:   323]
+Acc:0.9224580383961168, Acc_class:0.9612285365587128, mIoU:0.4613087919166699, fwIoU: 0.9224455920803465
+Loss: -41.465
+Dice:[9.59664677e-01 3.20969913e-04]
+
+=>Epoches 53, learning rate = 0.0008,                 previous best = 0.4649
+[Epoch: 53, numImages:  1347]
+Loss: -168.060
+Val time: 0.12187314033508301
+Total paramerters: 6580326
+Validation:
+[Epoch: 53, numImages:   323]
+Acc:0.9313584413466218, Acc_class:0.9031795714614608, mIoU:0.46575817594033303, fwIoU: 0.9313461018179124
+Loss: -41.440
+Dice:[9.64459040e-01 3.17266073e-04]
+
+=>Epoches 54, learning rate = 0.0008,                 previous best = 0.4658
+[Epoch: 54, numImages:  1347]
+Loss: -168.023
+Val time: 0.13176965713500977
+Total paramerters: 6580326
+Validation:
+[Epoch: 54, numImages:   323]
+Acc:0.9292911724974875, Acc_class:0.9589633986885449, mIoU:0.4647321608868104, fwIoU: 0.9292787363523389
+Loss: -41.455
+Dice:[9.63349374e-01 3.47978425e-04]
+
+=>Epoches 55, learning rate = 0.0008,                 previous best = 0.4658
+[Epoch: 55, numImages:  1347]
+Loss: -167.996
+Val time: 0.12028789520263672
+Total paramerters: 6580326
+Validation:
+[Epoch: 55, numImages:   323]
+Acc:0.9249281799482985, Acc_class:0.9624636227095436, mIoU:0.46254651832888694, fwIoU: 0.9249157336982616
+Loss: -41.475
+Dice:[9.60999692e-01 3.31527513e-04]
+
+=>Epoches 56, learning rate = 0.0007,                 previous best = 0.4658
+[Epoch: 56, numImages:  1347]
+Loss: -168.087
+Val time: 0.12185120582580566
+Total paramerters: 6580326
+Validation:
+[Epoch: 56, numImages:   323]
+Acc:0.9334032183559441, Acc_class:0.9269289625008201, mIoU:0.4667872388206505, fwIoU: 0.933390838128815
+Loss: -41.493
+Dice:[9.65554226e-01 3.43985561e-04]
+
+=>Epoches 57, learning rate = 0.0007,                 previous best = 0.4668
+[Epoch: 57, numImages:  1347]
+Loss: -168.090
+Val time: 0.12122869491577148
+Total paramerters: 6580326
+Validation:
+[Epoch: 57, numImages:   323]
+Acc:0.9321193445312046, Acc_class:0.9660592497604907, mIoU:0.4661509255947408, fwIoU: 0.9321068984997656
+Loss: -41.495
+Dice:[9.64866803e-01 3.66636114e-04]
+
+=>Epoches 58, learning rate = 0.0007,                 previous best = 0.4668
+[Epoch: 58, numImages:  1347]
+Loss: -168.089
+Val time: 0.1220235824584961
+Total paramerters: 6580326
+Validation:
+[Epoch: 58, numImages:   323]
+Acc:0.9297192954735314, Acc_class:0.9250869781300143, mIoU:0.4649407485370241, fwIoU: 0.929706918782062
+Loss: -41.495
+Dice:[9.63579398e-01 3.25960653e-04]
+
+=>Epoches 59, learning rate = 0.0006,                 previous best = 0.4668
+[Epoch: 59, numImages:  1347]
+Loss: -168.129
+Val time: 0.1183314323425293
+Total paramerters: 6580326
+Validation:
+[Epoch: 59, numImages:   323]
+Acc:0.9377072936014748, Acc_class:0.9205584057353362, mIoU:0.4689435469809275, fwIoU: 0.9376949224357642
+Loss: -41.469
+Dice:[9.67851992e-01 3.60936665e-04]
+
+=>Epoches 60, learning rate = 0.0006,                 previous best = 0.4689
+[Epoch: 60, numImages:  1347]
+Loss: -168.098
+Val time: 0.12264132499694824
+Total paramerters: 6580326
+Validation:
+[Epoch: 60, numImages:   323]
+Acc:0.9301938874393755, Acc_class:0.9650965092300798, mIoU:0.4651856568270963, fwIoU: 0.9301814413449918
+Loss: -41.484
+Dice:[9.63834196e-01 3.56526821e-04]
+
+=>Epoches 61, learning rate = 0.0006,                 previous best = 0.4689
+[Epoch: 61, numImages:  1347]
+Loss: -168.131
+Val time: 0.12048864364624023
+Total paramerters: 6580326
+Validation:
+[Epoch: 61, numImages:   323]
+Acc:0.9329726198629398, Acc_class:0.9437589029298172, mIoU:0.46657453500127044, fwIoU: 0.9329602116822202
+Loss: -41.495
+Dice:[9.65323769e-01 3.54430380e-04]
+
+=>Epoches 62, learning rate = 0.0005,                 previous best = 0.4689
+[Epoch: 62, numImages:  1347]
+Loss: -168.130
+Val time: 0.12311267852783203
+Total paramerters: 6580326
+Validation:
+[Epoch: 62, numImages:   323]
+Acc:0.9387964503350117, Acc_class:0.9353073595109758, mIoU:0.46949261443288376, fwIoU: 0.9387840563269996
+Loss: -41.509
+Dice:[9.68431817e-01 3.78905149e-04]
+
+=>Epoches 63, learning rate = 0.0005,                 previous best = 0.4695
+[Epoch: 63, numImages:  1347]
+Loss: -168.168
+Val time: 0.12041616439819336
+Total paramerters: 6580326
+Validation:
+[Epoch: 63, numImages:   323]
+Acc:0.9360857592633314, Acc_class:0.9311111233772181, mIoU:0.46813268481919185, fwIoU: 0.9360733719628908
+Loss: -41.506
+Dice:[9.66987515e-01 3.60629442e-04]
+
+=>Epoches 64, learning rate = 0.0004,                 previous best = 0.4695
+[Epoch: 64, numImages:  1347]
+Loss: -168.188
+Val time: 0.12070155143737793
+Total paramerters: 6580326
+Validation:
+[Epoch: 64, numImages:   323]
+Acc:0.9418091544758656, Acc_class:0.9709042150444697, mIoU:0.47101115326941667, fwIoU: 0.9417967088244085
+Loss: -41.498
+Dice:[9.70032281e-01 4.27661433e-04]
+
+=>Epoches 65, learning rate = 0.0004,                 previous best = 0.4710
+[Epoch: 65, numImages:  1347]
+Loss: -168.177
+Val time: 0.12930679321289062
+Total paramerters: 6580326
+Validation:
+[Epoch: 65, numImages:   323]
+Acc:0.9458762166546981, Acc_class:0.9530516553666484, mIoU:0.47304818521490977, fwIoU: 0.9458637978866259
+Loss: -41.483
+Dice:[9.72185051e-01 4.41503987e-04]
+
+=>Epoches 66, learning rate = 0.0004,                 previous best = 0.4730
+[Epoch: 66, numImages:  1347]
+Loss: -168.192
+Val time: 0.12174105644226074
+Total paramerters: 6580326
+Validation:
+[Epoch: 66, numImages:   323]
+Acc:0.9377529845716588, Acc_class:0.9688761048458141, mIoU:0.4689760761040773, fwIoU: 0.9377405387467478
+Loss: -41.486
+Dice:[9.67876290e-01 3.99805095e-04]
+
+=>Epoches 67, learning rate = 0.0003,                 previous best = 0.4730
+[Epoch: 67, numImages:  1347]
+Loss: -168.191
+Val time: 0.12747430801391602
+Total paramerters: 6580326
+Validation:
+[Epoch: 67, numImages:   323]
+Acc:0.9380349105889247, Acc_class:0.9661761958832797, mIoU:0.469116927323964, fwIoU: 0.938022469143919
+Loss: -41.503
+Dice:[9.68026437e-01 3.99342340e-04]
+
+=>Epoches 68, learning rate = 0.0003,                 previous best = 0.4730
+[Epoch: 68, numImages:  1347]
+Loss: -168.159
+Val time: 0.12091612815856934
+Total paramerters: 6580326
+Validation:
+[Epoch: 68, numImages:   323]
+Acc:0.9443326964653367, Acc_class:0.9039850323237417, mIoU:0.4722625934651296, fwIoU: 0.9443203450512261
+Loss: -41.474
+Dice:[9.71369139e-01 3.86103328e-04]
+
+=>Epoches 69, learning rate = 0.0003,                 previous best = 0.4730
+[Epoch: 69, numImages:  1347]
+Loss: -168.176
+Val time: 0.1205739974975586
+Total paramerters: 6580326
+Validation:
+[Epoch: 69, numImages:   323]
+Acc:0.9432909989283841, Acc_class:0.9148276719752592, mIoU:0.4717424514669548, fwIoU: 0.9432786332564603
+Loss: -41.467
+Dice:[9.70817729e-01 3.88983780e-04]
+
+=>Epoches 70, learning rate = 0.0002,                 previous best = 0.4730
+[Epoch: 70, numImages:  1347]
+Loss: -168.209
+Val time: 0.12429666519165039
+Total paramerters: 6580326
+Validation:
+[Epoch: 70, numImages:   323]
+Acc:0.9475184038771971, Acc_class:0.9141005270360842, mIoU:0.47386333861651553, fwIoU: 0.9475060361154567
+Loss: -41.485
+Dice:[9.73051763e-01 4.17610219e-04]
+
+=>Epoches 71, learning rate = 0.0002,                 previous best = 0.4739
+[Epoch: 71, numImages:  1347]
+Loss: -168.204
+Val time: 0.12314367294311523
+Total paramerters: 6580326
+Validation:
+[Epoch: 71, numImages:   323]
+Acc:0.9452243069454306, Acc_class:0.9214760854690265, mIoU:0.4727138352644548, fwIoU: 0.9452119309077007
+Loss: -41.496
+Dice:[9.71840614e-01 4.07868243e-04]
+
+=>Epoches 72, learning rate = 0.0001,                 previous best = 0.4739
+[Epoch: 72, numImages:  1347]
+Loss: -168.232
+Val time: 0.13413071632385254
+Total paramerters: 6580326
+Validation:
+[Epoch: 72, numImages:   323]
+Acc:0.9490948838066604, Acc_class:0.9205705242650781, mIoU:0.4746562056697716, fwIoU: 0.9490825066173951
+Loss: -41.486
+Dice:[9.73882392e-01 4.36090518e-04]
+
+=>Epoches 73, learning rate = 0.0001,                 previous best = 0.4747
+[Epoch: 73, numImages:  1347]
+Loss: -168.244
+Val time: 0.12231898307800293
+Total paramerters: 6580326
+Validation:
+[Epoch: 73, numImages:   323]
+Acc:0.9476318532830412, Acc_class:0.9226798736229644, mIoU:0.473922309623043, fwIoU: 0.9476194742968832
+Loss: -41.490
+Dice:[9.73111578e-01 4.26611369e-04]
+
+=>Epoches 74, learning rate = 0.0001,                 previous best = 0.4747
+[Epoch: 74, numImages:  1347]
+Loss: -168.243
+Val time: 0.12498092651367188
+Total paramerters: 6580326
+Validation:
+[Epoch: 74, numImages:   323]
+Acc:0.9494969077610357, Acc_class:0.9122489175667345, mIoU:0.47485599327788275, fwIoU: 0.9494845407170425
+Loss: -41.490
+Dice:[9.74094005e-01 4.31164817e-04]
+Training time is:  1527.8494896888733

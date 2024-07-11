@@ -1,0 +1,14 @@
+fusion_type is attention_fusion
+Initializing loss: pairwise_loss
+base_loss is: binary_dice
+fusion_loss is: multi_class_dice
+pairwise loss weights:  [1.0, 1.0]
+Using poly LR Scheduler!
+=> loaded checkpoint './run/custom1/checkpoint/experiment_8/checkpoint.pth.tar' (epoch 75)
+Val time: 0.4230082035064697
+Total paramerters: 6580326
+Validation:
+[Epoch: 0, numImages:   323]
+Acc:0.9494969077610357, Acc_class:0.9122489175667345, mIoU:0.47485599327788275, fwIoU: 0.9494845407170425
+Loss: -41.490
+Dice:[9.74094005e-01 4.31164817e-04]

@@ -1,0 +1,10 @@
+datset:custom1
+backbone:mobilenet
+out_stride:16
+lr:0.0025
+lr_scheduler:poly
+batch_size:16
+loss_type:pairwise_loss
+epoch:75
+base_size:512
+crop_size:512
