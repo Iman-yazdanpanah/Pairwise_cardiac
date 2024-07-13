@@ -12,4 +12,5 @@ Once the model is trained, validate it by changing the only-val argument.
 
 # ANTIALIAS error
 If you encounter this error, install pillow with version's bellow 10.0 
-for example: 'pip install Pillow==9.0'
+for example: '
+pip install Pillow==9.0'
