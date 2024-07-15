@@ -154,8 +154,9 @@ class Trainer(object):
         
         for batch_idx, batch_data in enumerate(self.all_loader):
             batch_data, _, indices = batch_data 
-            inputs1 = batch_data[:6] # Assuming inputs are the first element in batch_data
-            inputs2= batch_data[6:]
+            mid_point = self.args.test_batch_size/2
+            inputs1 = batch_data[:mid_point] # Assuming inputs are the first element in batch_data
+            inputs2= batch_data[mid_point:]
             if self.args.cuda:
                 inputs1 = inputs1.to('cuda')
                 inputs2 = inputs2.to('cuda')
@@ -200,8 +201,9 @@ class Trainer(object):
             #print('sss',proxy_label)
             image2, target2 = data['image'][7:15],data['mask'][7:15]'''
         for i, (images, targets, sample_indices) in enumerate(tbar):
-            image1,target1=images[0:3],targets[0:3]
-            image2,target2=images[4:7],targets[4:7]
+            mid_point = int(self.args.batch_size/2)
+            image1,target1=images[:mid_point],targets[:mid_point]
+            image2,target2=images[mid_point:],targets[mid_point:]
             if image1.dim() == 3:
                 image1 = image1.unsqueeze(0)
             if image2.dim() == 3:
@@ -262,8 +264,9 @@ class Trainer(object):
 
         #for i, data in enumerate(tbar):
         for i, (images, targets, sample_indices) in enumerate(tbar):
-            image1,target1=images[0:3],targets[0:3]
-            image2,target2=images[4:7],targets[4:7]
+            mid_point = self.args.batch_size/2
+            image1,target1 = images[:mid_point],targets[:mid_point]
+            image2,target2 = images[mid_point:],targets[mid_point:]
             #image1, target1 = sample1, proxy_label
             #print('h')
             #print(image1.type)
@@ -369,10 +372,10 @@ def main():
                         metavar='N', help='start epochs (default:0)')
     parser.add_argument('--batch-size', type=int, default=16,
                         metavar='N', help='input batch size for \
-                                training (default: auto)')
+                                training, choose an even number (default: auto)')
     parser.add_argument('--test-batch-size', type=int, default=16,
                         metavar='N', help='input batch size for \
-                                testing (default: auto)')
+                                testing, choose an even number (default: auto)')
     parser.add_argument('--use-balanced-weights', action='store_true', default=False,
                         help='whether to use balanced weights (default: False)')
     parser.add_argument('--pretrained', action='store_true', default=True,
@@ -398,12 +401,13 @@ def main():
     parser.add_argument('--seed', type=int, default=1, metavar='S',
                         help='random seed (default: 1)')
     # checking point
+    '''
     parser.add_argument('--resume', type=str, default='./run/custom1/checkpoint/model_best.pth.tar',
                         help='put the path to resuming file if needed')
     '''
     parser.add_argument('--resume', type=str, default=None,
     help='put the path to resuming file if needed')
-    '''
+    
     parser.add_argument('--checkname', type=str, default='./checkpoint',
                         help='set the checkpoint name')
     # finetuning pre-trained models
@@ -418,7 +422,7 @@ def main():
                         help='just evaluation but not training')
     parser.add_argument('--save-predict', action='store_true', default=True,
                         help='save predicted mask in disk')
-    parser.add_argument('--val_all', action='store_true',default=True, help='Run validation on all data')
+    parser.add_argument('--val_all', action='store_true',default=False, help='Run validation on all data')
 
     args = parser.parse_args()
     args.cuda = not args.no_cuda and torch.cuda.is_available()
