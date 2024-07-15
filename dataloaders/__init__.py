@@ -97,7 +97,7 @@ def make_data_loader(args, **kwargs):
                                 collate_fn=custom_collate, **kwargs)
         
         # Create an all_loader for all data
-        all_loader = DataLoader(dataset, batch_size=12, shuffle=True, drop_last=True, 
+        all_loader = DataLoader(dataset, batch_size=args.test_batch_size, shuffle=True, drop_last=True, 
                                 collate_fn=custom_collate, **kwargs)
         
         test_loader = None
