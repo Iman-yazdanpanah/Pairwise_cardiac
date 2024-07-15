@@ -56,7 +56,7 @@ def make_data_loader(args, **kwargs):
         #image_dir = os.path.join(args.data_root, 'images')
        # mask_dir = os.path.join(args.data_root, 'masks')
        # csv_file = os.path.join(args.data_root, 'data.csv')
-        csv_file='./train/train.csv'
+        '''csv_file='./train/train.csv'
         image_dir='./train/images'
         mask_dir='./train/masks'
         
@@ -74,6 +74,35 @@ def make_data_loader(args, **kwargs):
         test_loader = None
         
         return train_loader, val_loader, test_loader, num_class
+'''     
+        
+        
+        # image_dir = os.path.join(args.data_root, 'images')
+        # mask_dir = os.path.join(args.data_root, 'masks')
+        # csv_file = os.path.join(args.data_root, 'data.csv')
+        csv_file = './train/train.csv'
+        image_dir = './train/images'
+        mask_dir = './train/masks'
+
+        dataset = CustomDataset(csv_file=csv_file, image_dir=image_dir, mask_dir=mask_dir, transform=transform)
+
+        train_idx, test_idx = train_test_split(list(range(len(dataset))), test_size=0.2, random_state=args.seed)
+        train_set = Subset(dataset, train_idx)
+        val_set = Subset(dataset, test_idx)
+
+        num_class = 2  # Update this based on your specific number of classes
+
+        train_loader = DataLoader(train_set, batch_size=args.batch_size, shuffle=True, drop_last=True, **kwargs)
+        val_loader = DataLoader(val_set, batch_size=args.batch_size, shuffle=False, drop_last=True, 
+                                collate_fn=custom_collate, **kwargs)
+        
+        # Create an all_loader for all data
+        all_loader = DataLoader(dataset, batch_size=12, shuffle=True, drop_last=True, 
+                                collate_fn=custom_collate, **kwargs)
+        
+        test_loader = None
+
+        return train_loader, val_loader, test_loader, num_class, all_loader
 
     else:
         raise NotImplementedError
