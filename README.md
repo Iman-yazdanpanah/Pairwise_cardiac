@@ -9,8 +9,7 @@ To tain run the main_cfcn.py and change the neccessary arguments.
 
 Once the model is trained, validate it by changing the `only-val` argument.
 
-
-If ypu want to get the prediction masks use `val_all` argument. 
+If you want to get the prediction masks for all the images, use `val_all` argument. 
 
 # ANTIALIAS error
 If you encounter this error, install pillow with version's bellow 10.0 
