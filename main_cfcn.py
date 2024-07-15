@@ -53,7 +53,7 @@ class Trainer(object):
         
         # Define Dataloader
         kwargs = {'num_workers': args.workers, 'pin_memory': True}
-        self.train_loader, self.val_loader, self.test_loader, self.nclass = make_data_loader(args, **kwargs)
+        self.train_loader, self.val_loader, self.test_loader, self.nclass, self.all_loader= make_data_loader(args, **kwargs)
         
         if args.dataset == 'pairwise_lits':
             proxy_nclasses = 3
@@ -143,7 +143,42 @@ class Trainer(object):
         # Clear start epoch if fine-tuning
         if args.ft:
             args.start_epoch = 0
+    def vall_al(self):
+        
+        # Set model to evaluation mode
+        self.model.eval()
+        self.model.to('cuda')  # Move model to appropriate device (GPU or CPU)
+        original_dataset = self.all_loader.dataset
 
+        #saver = Saver(args)  # Initialize your Saver class
+        
+        for batch_idx, batch_data in enumerate(self.all_loader):
+            batch_data, _, indices = batch_data 
+            inputs1 = batch_data[:6] # Assuming inputs are the first element in batch_data
+            inputs2= batch_data[6:]
+            if self.args.cuda:
+                inputs1 = inputs1.to('cuda')
+                inputs2 = inputs2.to('cuda')
+            with torch.no_grad():
+                outputs = self.model(inputs1,inputs2)
+                pred1 = outputs[0].data.cpu().numpy()
+                pred2 = outputs[1].data.cpu().numpy()
+                #target1 = target1.cpu().numpy()
+                pred1 = np.argmax(pred1, axis=1)
+                #target2 = target1.cpu().numpy()
+                pred2 = np.argmax(pred2, axis=1)
+                
+                # Add batch sample into evaluator
+                #self.evaluator.add_batch(target1, pred1)
+                    
+                sample_indices = list(range(batch_idx * self.all_loader.batch_size, (batch_idx + 1) * self.all_loader.batch_size))
+                #original_dataset = self.all_loader.dataset.dataset
+                data1_files = original_dataset.get_image_paths()
+                self.saver.save_predict_mask(pred1, sample_indices[:len(pred1)], data1_files)  # Assuming data1_files are available in dataset
+                self.saver.save_predict_mask(pred2, sample_indices[len(pred1):len(pred1)+len(pred2)], data1_files)  # Assuming data1_files are available in dataset
+                
+
+        pass    
     def training(self, epoch):
         train_loss = 0.0
         self.model.train()
@@ -262,8 +297,7 @@ class Trainer(object):
                 original_dataset = self.val_loader.dataset.dataset
                 data1_files = original_dataset.get_image_paths()
                 self.saver.save_predict_mask(pred1, sample_indices, data1_files)
-
-
+    
 
         print("Val time: {}".format(val_time))
         print("Total paramerters: {}".format(sum(x.numel() for x in self.model.parameters())))  
@@ -323,13 +357,13 @@ def main():
                         help='crop image size')
     parser.add_argument('--sync-bn', type=bool, default=None,
                         help='whether to use sync bn (default: auto)')
-    parser.add_argument('--freeze-bn', type=bool, default=False,
+    parser.add_argument('--freeze-bn', type=bool, default=True,
                         help='whether to freeze bn parameters (default: False)')
     parser.add_argument('--loss-type', type=str, default='pairwise_loss',
                         choices=['pairwise_loss'],
                         help='loss func type (default: pairwise_loss)')
     # training hyper params
-    parser.add_argument('--epochs', type=int, default=75, metavar='N',
+    parser.add_argument('--epochs', type=int, default=60, metavar='N',
                         help='number of epochs to train (default: auto)')
     parser.add_argument('--start_epoch', type=int, default=0,
                         metavar='N', help='start epochs (default:0)')
@@ -344,12 +378,12 @@ def main():
     parser.add_argument('--pretrained', action='store_true', default=True,
                         help='whether to use pretrained backbone (default: False)')
     # optimizer params
-    parser.add_argument('--lr', type=float, default=0.0025, metavar='LR',
+    parser.add_argument('--lr', type=float, default=0.003, metavar='LR',
                         help='learning rate (default: auto)')
     parser.add_argument('--lr-scheduler', type=str, default='poly',
                         choices=['poly', 'step', 'cos'],
                         help='lr scheduler mode: (default: poly)')
-    parser.add_argument('--momentum', type=float, default=0.99,
+    parser.add_argument('--momentum', type=float, default=0.9,
                         metavar='M', help='momentum (default: 0.9)')
     parser.add_argument('--weight-decay', type=float, default=1e-7,
                         metavar='M', help='w-decay (default: 5e-4)')
@@ -364,8 +398,12 @@ def main():
     parser.add_argument('--seed', type=int, default=1, metavar='S',
                         help='random seed (default: 1)')
     # checking point
-    parser.add_argument('--resume', type=str, default=None,
+    parser.add_argument('--resume', type=str, default='./run/custom1/checkpoint/model_best.pth.tar',
                         help='put the path to resuming file if needed')
+    '''
+    parser.add_argument('--resume', type=str, default=None,
+    help='put the path to resuming file if needed')
+    '''
     parser.add_argument('--checkname', type=str, default='./checkpoint',
                         help='set the checkpoint name')
     # finetuning pre-trained models
@@ -380,6 +418,7 @@ def main():
                         help='just evaluation but not training')
     parser.add_argument('--save-predict', action='store_true', default=True,
                         help='save predicted mask in disk')
+    parser.add_argument('--val_all', action='store_true',default=True, help='Run validation on all data')
 
     args = parser.parse_args()
     args.cuda = not args.no_cuda and torch.cuda.is_available()
@@ -424,25 +463,27 @@ def main():
     torch.manual_seed(args.seed)
     trainer = Trainer(args)
     
-    if args.only_val:
+    if args.val_all:
+        trainer.vall_al()
+    elif args.only_val:
         if args.resume is not None:
             trainer.validation(trainer.args.start_epoch)
             return
         else:
             raise NotImplementedError
-    
-    print('Starting Epoch:', trainer.args.start_epoch)
-    print('Total Epoches:', trainer.args.epochs)
-    
-    start = time.time()
-    for epoch in range(trainer.args.start_epoch, trainer.args.epochs):
-        #trainer.validation(epoch)
-        trainer.training(epoch)
-        if not trainer.args.no_val and epoch % args.eval_interval == (args.eval_interval - 1):
-            trainer.validation(epoch)
-    end = time.time()
-    print('Training time is: ', end-start)
-    trainer.writer.close()
+    else:
+        print('Starting Epoch:', trainer.args.start_epoch)
+        print('Total Epoches:', trainer.args.epochs)
+        
+        start = time.time()
+        for epoch in range(trainer.args.start_epoch, trainer.args.epochs):
+            #trainer.validation(epoch)
+            trainer.training(epoch)
+            if not trainer.args.no_val and epoch % args.eval_interval == (args.eval_interval - 1):
+                trainer.validation(epoch)
+        end = time.time()
+        print('Training time is: ', end-start)
+        trainer.writer.close()
 
 if __name__ == "__main__":
    main()
