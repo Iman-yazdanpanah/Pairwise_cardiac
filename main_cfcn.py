@@ -154,7 +154,7 @@ class Trainer(object):
         
         for batch_idx, batch_data in enumerate(self.all_loader):
             batch_data, _, indices = batch_data 
-            mid_point = self.args.test_batch_size/2
+            mid_point = int(self.args.test_batch_size/2)
             inputs1 = batch_data[:mid_point] # Assuming inputs are the first element in batch_data
             inputs2= batch_data[mid_point:]
             if self.args.cuda:
@@ -264,7 +264,7 @@ class Trainer(object):
 
         #for i, data in enumerate(tbar):
         for i, (images, targets, sample_indices) in enumerate(tbar):
-            mid_point = self.args.batch_size/2
+            mid_point = int(self.args.batch_size/2)
             image1,target1 = images[:mid_point],targets[:mid_point]
             image2,target2 = images[mid_point:],targets[mid_point:]
             #image1, target1 = sample1, proxy_label
@@ -370,7 +370,7 @@ def main():
                         help='number of epochs to train (default: auto)')
     parser.add_argument('--start_epoch', type=int, default=0,
                         metavar='N', help='start epochs (default:0)')
-    parser.add_argument('--batch-size', type=int, default=16,
+    parser.add_argument('--batch-size', type=int, default=12,
                         metavar='N', help='input batch size for \
                                 training, choose an even number (default: auto)')
     parser.add_argument('--test-batch-size', type=int, default=16,
